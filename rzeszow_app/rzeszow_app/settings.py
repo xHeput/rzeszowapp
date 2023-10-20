@@ -1,10 +1,7 @@
 from pathlib import Path
-import pymysql
 
-pymysql.version_info = (1, 4, 6, 'final', 0)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-pymysql.install_as_MySQLdb
 
 
 # Quick-start development settings - unsuitable for production
@@ -70,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mylifeclinicdb',
         'USER': 'root',
-        'PASSWORD': 'HZJ8D9DBfUAZeYK8PLh1',
+        'PASSWORD': 'nAAKs55ZgpnAwrPGJwcp',
         'HOST': 'localhost',
         'PORT': '3306',
     }
