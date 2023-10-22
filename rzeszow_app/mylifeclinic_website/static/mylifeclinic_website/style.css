@@ -1,0 +1,64 @@
+@import url("https://db.onlinewebfonts.com/c/17fdba0db4aed68bd367124ce3803fd3?family=ProximaNovaExCn-Regular");
+@import url("https://db.onlinewebfonts.com/c/7774b78789333f7af07cff84380f5c6a?family=ProximaNovaExCn-Bold");
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+
+}
+.construction{
+    font-weight: normal;
+    font-style: normal;
+    color:  #62b7de;
+}
+.header{
+    padding: 10px;
+    text-align: center;
+
+}
+.construction{
+    width: 40%;
+    padding: 50px;
+    text-align: center;
+    
+}
+.image{
+    width: 40%;
+    grid-area: right;
+    padding: 20px;
+
+}
+.construction .p1{
+    font-family: "ProximaNovaExCn-Bold";
+    font-size: 80px;   
+    margin-bottom: 5px;
+    
+}
+.construction .p2{
+    font-family: "ProximaNovaExCn-Regular";
+    font-size: 30px;  
+    margin-top: 0px;
+    margin-bottom: 20px;
+         
+}
+.signup{
+    /*font-family: fantasy;*/
+    font-family: "ProximaNovaExCn-Bold";
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 40px;
+    background-color: #62b7de;
+    font-size: 50px;  
+    color:  white;
+    border-radius: 15px;
+    padding:10px;
+    border: none;
+    cursor:pointer;
+}
+.signup:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.content{
+    display:flex;
+    flex-wrap:wrap;
+}
