@@ -1,1 +1,96 @@
-<h1>Golon rura</h1>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh; 
+
+        }
+        .container p {
+            font-family: fantasy;
+            font-weight: normal;
+            font-style: normal;
+            color:  #62b7de;
+        }
+        .header{
+            padding: 10px;
+            text-align: center;
+
+        }
+        .construction{
+            width: 40%;
+            padding: 50px;
+            text-align: center;
+            
+        }
+        .image{
+            width: 40%;
+            grid-area: right;
+            padding: 20px;
+
+        }
+        .p1{
+            font-size: 80px;   
+            margin-bottom: 5px;    
+        }
+        .p2{
+            font-size: 30px;  
+            margin-top: 0px;
+            margin-bottom: 20px;
+                 
+        }
+        .signup{
+            font-family: fantasy;
+            font-weight: normal;
+            font-style: normal;
+            margin-top: 40px;
+            background-color: #62b7de;
+            font-size: 50px;  
+            color:  white;
+            border-radius: 15px;
+            padding:10px;
+            border: none;
+            cursor:pointer;
+        }
+        .signup:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .content{
+            display:flex;
+            flex-wrap:wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" width="600px" height="200px" >
+
+        </div>
+        <div class="content">
+            <div class="construction">
+                <p class="p1">UNDER </br> CONSTRUCTION</p> 
+                <p class="p2">We are working hard to finish the developement 
+                of this site. Sign up below to receive updates
+                and to be notified when we launch!</p>
+
+                <button type="button" class="signup">Sign Up</button>
+
+            </div>
+
+            <div class="image">
+                <img src="{% static 'mylifeclinic_website/images/mylifeclinic_under_construction.png' %}" width="900px" height="600px">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
