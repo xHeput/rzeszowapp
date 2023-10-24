@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\materialystudia\SemestrV\Aplikacje\rzeszowapp\rzeszow_app\virt"
+VIRTUAL_ENV="C:\Users\mateu\Desktop\Projekt\rzeszowapp\rzeszow_app\virt"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
