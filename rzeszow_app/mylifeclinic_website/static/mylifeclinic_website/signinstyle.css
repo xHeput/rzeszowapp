@@ -1,0 +1,46 @@
+@import url("https://db.onlinewebfonts.com/c/17fdba0db4aed68bd367124ce3803fd3?family=ProximaNovaExCn-Regular");
+@import url("https://db.onlinewebfonts.com/c/7774b78789333f7af07cff84380f5c6a?family=ProximaNovaExCn-Bold");
+body {
+    background-color: #f4f4f4;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.header{ 
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-family: "ProximaNovaExCn-Regular";
+    color:  #62b7de;
+    font-size: 40px;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.signin{
+    font-family: "ProximaNovaExCn-Bold";
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 40px;
+    background-color: #62b7de;
+    font-size: 35px;  
+    color:  white;
+    border-radius: 15px;
+    padding:10px;
+    border: none;
+    cursor:pointer;     
+}
+.signin:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
