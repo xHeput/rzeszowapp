@@ -16,9 +16,14 @@
         <h1>Login</h1>
             <div class="login">
                 <form>
-                 
+                    <div class="inputs">
+                        <input type="email" class="inp" placeholder="Email">
+                        <input type="password" class="inp" placeholder="Password">
+                        <input type="checkbox"> <span>Remember Me</span>     
+                    </div>
                     <button type="submit" class="signin">Sign In</button>
                 </form>
+                Not a Member? <a href="{% url 'form' %}">Sign Up</a>
             </div>
     </div>
 </body>
