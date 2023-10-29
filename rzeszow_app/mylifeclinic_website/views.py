@@ -8,3 +8,6 @@ def register_user(request):
 
 def login_user(request):
     return render(request, 'login.html', {})
+
+def statute(request):
+    return render(request,'statute.html',{})

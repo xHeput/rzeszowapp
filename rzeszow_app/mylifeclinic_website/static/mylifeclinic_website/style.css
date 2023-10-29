@@ -1,5 +1,6 @@
 @import url("https://db.onlinewebfonts.com/c/17fdba0db4aed68bd367124ce3803fd3?family=ProximaNovaExCn-Regular");
 @import url("https://db.onlinewebfonts.com/c/7774b78789333f7af07cff84380f5c6a?family=ProximaNovaExCn-Bold");
+
 .container{
     display: flex;
     flex-direction: column;
@@ -15,6 +16,20 @@
     padding: 10px;
     text-align: center;
 
+}
+header 
+{
+    display: flex;
+    width: 100vh;
+    aspect-ratio: auto;
+}
+header .statute_logo
+{
+    
+    width: 25rem ;
+    justify-content: center;
+    align-items: center;
+    
 }
 .construction{
     width: 40%;
