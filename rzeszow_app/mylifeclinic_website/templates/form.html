@@ -10,38 +10,34 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" width="320px" height="110px"></a>
+            <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" ></a>
         </div>
         <h1>Create Account</h1>
             <div class="form">
                 <form>
                     <div class="input_group">
-                        <label for="input" class="text">First Name <span>*</span></label>
-                        <input type="text" class="input" name="input" required>
-                  
-                        <label for="lastName" class="text">Last Name <span>*</span></label>
-                        <input type="text" class="lastName" name="lastName" required>
-                    
-                        <label for="email" class="text">Email <span>*</span></label>
-                        <input type="email" class="email" name="email" required>
-                  
-                        <label for="password" class="text">Password <span>*</span></label>
-                        <input type="password" class="password" name="password" required>
-              
-                        <label for="confirmPassword" class="text">Confirm Password <span>*</span></label>
-                        <input type="password" class="confirmPassword" name="confirmPassword" required>
+                        
+                        <input type="text" class="input" name="username" placeholder="First Nam" required>
+                                        
+                        <input type="text" class="lastName" name="lastName" placeholder="Last Name" required>
+                                            
+                        <input type="email" class="email" name="email" placeholder="Email" required>
+                                          
+                        <input type="password" class="password" name="password" placeholder="Password" required>
+                                     
+                        <input type="password" class="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
                     </div>
-                    <div class="terms">
-                        <input type="checkbox">
-                            <span>By selecting "Sign Up", you are confirming that you have read <br>
-                                and agree to MyLIFE CLINIC'S <a href="{% url 'statute' %}" target="_blank"> Terms of Use and Privacy Policy</a></span>
+                    <div class="terms link">
+                        <input type="checkbox" required>
+                            <span class="text_sign_up">By selecting "Sign Up", you are confirming that you have read<br>
+                                 and agree to MyLIFE CLINIC'S <a href="{% url 'statute' %}" class="link" target="_blank"> Terms of Use and Privacy Policy</a></span>
                         </div>  
                     </div>
                     <button type="submit" class="signup">Sign Up</button>
                      
                 </form>
                 <div class="bottom">
-                    Already have an account? <a href="{% url 'login' %}">Sign In</a>
+                    <p>Already have an account?<a href="{% url 'login' % }"> Sign In</a></p>
                 </div>
             </div>
     </div>
