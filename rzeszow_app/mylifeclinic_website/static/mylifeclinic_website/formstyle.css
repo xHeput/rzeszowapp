@@ -84,10 +84,11 @@ input[type="checkbox"]{
     width: 22px;
     height: 22px;
 }
-.form .bottom{
+.bottom{
     font-family: "ProximaNovaExCn-Regular";
     font-weight: normal;
-    font-style: normal;
+    font-style: normal; 
+    text-align: center;
     display: flex;
 }
 .text span{
@@ -97,4 +98,5 @@ input[type="checkbox"]{
 }
 a{
     text-decoration: none;
+    color: #62b7de;
 }
