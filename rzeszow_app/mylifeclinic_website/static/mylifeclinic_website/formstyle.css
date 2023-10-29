@@ -2,11 +2,11 @@
 @import url("https://db.onlinewebfonts.com/c/7774b78789333f7af07cff84380f5c6a?family=ProximaNovaExCn-Bold");
 body 
 {
-    background-color: #d1bcbc;
+    background-color: #62b7de;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: auto;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -15,14 +15,16 @@ body
 
 .container 
 {
-    max-width: 100vh;
+    max-width: 400px;
     margin: 0 auto;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header img
@@ -32,8 +34,6 @@ body
     padding: 10px;
     margin: 0 auto;
 }
-
-
 
 
 .header
@@ -51,6 +51,14 @@ h1
     font-size: 40px;
 }
 
+.form
+{
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .input_group 
 {
     font-family: "ProximaNovaExCn-Regular";
@@ -63,7 +71,7 @@ h1
 
 input[type="text"], input[type="email"], input[type="password"] 
 {
-    width: 80%;
+    width: 92%;
     padding: 8px;
     margin: 5px;
     border: 1px solid #ccc;
@@ -77,17 +85,18 @@ input[type="text"], input[type="email"], input[type="password"]
     font-family: "ProximaNovaExCn-Bold";
     font-weight: normal;
     font-style: normal;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 30px;
     background-color: #62b7de;
     font-size: 30px;  
     color:  white;
     border-radius: 15px;
-    padding:0 20px;
-    width: 70%;
-    height: 30px;
+    padding:10 10px;
+    width: 60%;
+    height: 40px;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .signup:hover
@@ -104,26 +113,19 @@ input[type="text"], input[type="email"], input[type="password"]
     font-size: 18px;
     justify-content: center;
     padding-top: 10px;
+    word-wrap: break-word;
+    width: 90%;
 }
 
-.terms.link
-{
-    width: 85%;
-   
-}
 
-.text_sign_up
-{
-    width: 85%;
-    
-    white-space: wrap;
-}
+
+
 
 
 input[type="checkbox"]
 {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
 }
 
 .bottom
