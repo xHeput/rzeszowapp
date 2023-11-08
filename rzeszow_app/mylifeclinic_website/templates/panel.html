@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Klienta</title>
+    <link rel="icon" type="image/x-icon" href="https://shorturl.at/yACJ8">
+    <link rel="stylesheet" href="{% static  'mylifeclinic_website/panelstyle.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav role="navigation">
+                <div class="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul class="menu">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Info</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>Show me more</li></a>
+                  </ul>
+                </div>
+              </nav>
+              
+              <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}">
+              Panel Pacjenta
+            
+        </div>
+    </div>
+</body>
+</html>

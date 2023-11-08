@@ -11,3 +11,6 @@ def login_user(request):
 
 def statute(request):
     return render(request,'statute.html',{})
+
+def panel_user(request):
+    return render(request,'panel.html',{})

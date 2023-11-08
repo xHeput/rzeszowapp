@@ -13,6 +13,7 @@
         <div class="header">
             <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" width="320px" height="110px"></a>
         </div>
+        <a href="{% url 'panel' %}"> panel</a>
         <h1>Login</h1>
             <div class="login">
                 <form>
@@ -26,7 +27,7 @@
                     <button type="submit" class="signin">Sign In</button>
                 </form>
                 <div class="bottom">
-                    Not a Member? <a href="{% url 'form' %}">Sign Up</a>
+                    Not a Member? <a href="{% url 'form' %}"> Sign Up</a>
                 </div>
             </div>
     </div>
