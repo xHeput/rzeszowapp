@@ -9,31 +9,40 @@
 </head>
 <body>
     <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
         <div class="header">
             <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" ></a>
         </div>
         <h1>Create Account</h1>
             <div class="form">
-                <form>
+                <form method="POST" action="">
                     <div class="input_group">
-                        
-                        <input type="text" class="input" name="username" placeholder="First Nam" required>
-                                        
-                        <input type="text" class="lastName" name="lastName" placeholder="Last Name" required>
-                                            
-                        <input type="email" class="email" name="email" placeholder="Email" required>
-                                          
-                        <input type="password" class="password" name="password" placeholder="Password" required>
-                                     
-                        <input type="password" class="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                        {% csrf_token %}
+                        {% if form.errors %}
+                                
+                                    Your Form Has Errors
+                                    {% for field in form %}
+                                        {% if field.errors %}
+                                            {{ field.errors }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                
+                            {% endif %}
+
+                        {{ form.as_p }}
                     </div>
                     <div class="terms">
                         <input type="checkbox" required>
-                            <span class="text_sign_up">By selecting "Sign Up", you are confirming that you have read
+                            <span class="text_sign_up">By selecting this checkbox, you are confirming that you have read
                                  and agree to MyLIFE CLINIC'S <a href="{% url 'statute' %}" target="_blank"> Terms of Use and Privacy Policy</a></span>
                         </div>  
                     </div>
-                    <button type="submit" class="signup">Sign Up</button>
+                    <button type="submit" class="signup">Register</button>
                      
                 </form>
                 <div class="bottom">

@@ -20,16 +20,16 @@
             <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" width="320px" height="110px"></a>
         </div>
         {% if user.is_authenticated %}
-        <h1>Jesteś zalogowany</h1>
+        <h1>You have logged in</h1>
         {% else %}
         <a href="{% url 'panel' %}"> panel</a>
         <h1>Login</h1>
             <div class="login">
                 
                 <form method="POST" action="{% url 'login' %}">
-                    {% csrf_token %}
+                    
                     <div class="input_group">
-                        <input type="text" class="inp" name="emaile" placeholder="Email" required>
+                        <input type="text" class="inp" name="email" placeholder="Email" required>
                         <input type="password" class="inp" name="password" placeholder="Password" required>
                     </div>
                     <div class="check">
@@ -39,7 +39,7 @@
                 </form>
                 
                 <div class="bottom">
-                    Not a Member? <a href="{% url 'form' %}"> Sign Up</a>
+                    Not a Member? <a href="{% url 'register' %}"> Sign Up</a>
                 </div>
             </div>
             {% endif %}
