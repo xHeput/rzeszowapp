@@ -66,9 +66,9 @@ WSGI_APPLICATION = 'rzeszow_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mylife_clinic',
+        'NAME': 'mylifeclinicdb',
         'USER': 'root',
-        'PASSWORD': 'HZJ8D9DBfUAZeYK8PLh1',
+        'PASSWORD': 'xRMajsha942mgCQrCjwH',
         'HOST': 'localhost',
         'PORT': '3306',
     }
