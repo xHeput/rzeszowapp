@@ -10,34 +10,37 @@
     <link rel="stylesheet" href="{% static  'mylifeclinic_website/panelstyle.css' %}">
 </head>
 <body>
-    <div class="container">
       <header>
-        <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}" height="50px" width="50px">
-        <div class="hamburger-menu">
-          <input id="menu__toggle" type="checkbox" />
-          <label class="menu__btn" for="menu__toggle">
-            <span></span>
-          </label>
-      
-          <ul class="menu__box">
-            <li><a class="menu__item" href="#">Home</a></li>
-            <li><a class="menu__item" href="#">About</a></li>
-            <li><a class="menu__item" href="#">Team</a></li>
-            <li><a class="menu__item" href="#">Contact</a></li>
-            <li><a class="menu__item" href="#">Twitter</a></li>
-          </ul>
-        </div>
-        <div class="logout">
-          {% if user.is_authenticated %}
-          <a href="{% url 'logout' %}">Logout</a>
-          {% else %}
-          <a href="{% url 'login' %}">Login</a>
-          {% endif %}
-        </div>
+          <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}">
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <ul class="menu__box">
+              <li><a class="menu__item" href="{% url 'home' %}">Home</a></li>
+              <li><a class="menu__item" href="#">About</a></li>
+              <li><a class="menu__item" href="#">Team</a></li>
+              <li><a class="menu__item" href="#">Contact</a></li>
+              <li><a class="menu__item" href="#">Twitter</a></li>
+            </ul>
+          </div>
+          <div class="logout">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+          </div>
+          <span>Panel Pacjenta</span> 
       </header>
-     
-   
-    </div>
+      <div class="container">
+        <div class="blok">
+          <div class="visit">Najbliższa wizyta</div>
+        </div>
+        <div class="empty1">chuj</div>
+        <div class="empty2">chuj</div>
+      </div>
  
 </body>
 </html>
