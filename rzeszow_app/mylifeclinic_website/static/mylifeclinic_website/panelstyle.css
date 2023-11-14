@@ -5,45 +5,65 @@ body{
   margin: 0px;
   padding: 0px;
 }
-.conteiner{
+.container{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
 }
 .blok{
-  flex-grow: 2;
-  position: static;
   background-color: #fff;
-  margin-top: 19px;
-  margin-left: 400px;
-  width: 1134px;
+  max-width: 100%;
+  margin-top: 12px;
   height: 100vh;
-  justify-content: center;
 }
 .visit{
   background-color: #e74158;
-  width: 800px;
-  justify-content: center;
   text-align: center;
+  border-radius: 20px;
+  height: 60px;
+  max-width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "ProximaNovaExCn-Bold";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 35px;
+  color: #fff;
 }
-.conteiner.empty1{
-  flex-grow: 1;
-  background-color: aquamarine;
+.welcome{
+  background-color: #0c9adb;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  border-radius: 15px;
+  text-align: center;
+  font-family: "ProximaNovaExCn-Bold";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+  color: #fff;
+  justify-content: center;
+}
+.empty1{
+  background-color: #fff; 
+  max-width: 14%;
+  margin-top: 12px;
 }
 .empty2{
-  flex-grow: 1;
-  background-color: orangered;
-  width: 50px;
+  background-color: #fff;
+  max-width: 14%;
+  margin-top: 12px;
 }
 header{
   box-sizing: border-box;
   height: 117px;
   background-color: #fff;
-  position: static;
+  justify-content: center;
 }
 header img{
   margin-left: 80px;
-  margin-top: 16px;
-  position: fixed;
   height:80px; 
   width: 80px;
 }
@@ -80,7 +100,6 @@ span{
   font-style: normal;
   float: right;
 }
-
 #menu__toggle {
   opacity: 0;
 }
