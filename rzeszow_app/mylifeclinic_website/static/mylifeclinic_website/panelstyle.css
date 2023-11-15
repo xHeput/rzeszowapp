@@ -44,8 +44,7 @@ header img{
   text-align: center;
   
 }
-.logout:hover
-{
+.logout:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .blok{
@@ -85,6 +84,10 @@ header img{
   justify-content: center;
   height: 150px;
 }
+.welcome img{
+  width: 120px;
+  height: 170px;
+}
 .empty1{
   background-color: #fff; 
   max-width: 14%;
@@ -119,6 +122,12 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.option1:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option2{
   background-color: #e6e6e6; 
@@ -133,6 +142,12 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.option2:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option3{
   background-color: #e6e6e6; 
@@ -147,6 +162,12 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.option3:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option4{
   background-color: #e6e6e6; 
@@ -161,8 +182,13 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
+.option4:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 span{
   color: #e74158;
   font-size: 50px;
