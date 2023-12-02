@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
+from .models import Appointment, Employee
+from datetime import date
 
 
 def home(request):
@@ -53,4 +55,17 @@ def statute(request):
     return render(request,'statute.html',{})
 
 def panel_user(request):
-    return render(request,'panel.html',{})
+    records = Appointment.objects.filter(
+        date_of__gt=date.today()
+    ).select_related(
+        'employee__postion',
+        'patient__employee'
+    ).order_by(
+        'date_of'
+    ).values(
+        'date_of', 'employee__postion__nazwa' , 'employee__imie', 'employee__nazwisko'
+    )
+    return render(request, 'panel.html', {'records': records})
+
+def test_user(request):
+    return render(request,'test.html',{})

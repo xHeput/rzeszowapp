@@ -42,7 +42,18 @@
           Skąd to wziąć?
           Jest dostępnych wiele różnych wersji Lorem Ipsum, ale większość zmieniła się pod wpływem dodanego humoru czy przypadkowych słów, które nawet w najmniejszym stopniu nie przypominają istniejących. Jeśli masz zamiar użyć fragmentu Lorem Ipsum, lepiej mieć pewność, że nie ma niczego „dziwnego” w środku tekstu. Wszystkie Internetowe generatory Lorem Ipsum mają tendencje do kopiowania już istniejących bloków, co czyni nasz pierwszym prawdziwym generatorem w Internecie. Używamy zawierającego ponad 200 łacińskich słów słownika, w kontekście wielu znanych sentencji, by wygenerować tekst wyglądający odpowiednio. To wszystko czyni „nasz” Lorem Ipsum wolnym od powtórzeń, humorystycznych wstawek czy niecharakterystycznych słów.</div>
         <div class="blok">
-            <div class="visit">Najbliższa wizyta: Środa 21.11 Dr. Agnieszka Nowak</div>
+          {% if records %}
+            <div class="visit"> 
+              <p>Najbliższa wizyta:
+                {% for record in records %}
+                  {{ record.date_of }}
+                  {{ record.employee__postion__nazwa }}
+                  {{ record.employee__imie }}
+                  {{ record.employee__nazwisko }}
+                {% endfor %}
+                </p>
+          {% endif %}
+            </div>
             <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj pacjencie,<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
               <div class="options">
                 <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
