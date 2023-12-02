@@ -783,23 +783,23 @@ INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_n
 INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('levi@example.com', 'password41', 'Levi', 'Clark', '1980-09-11', '111222333', '12345678901', 1, 36);
 INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('bella@example.com', 'password42', 'Bella', 'Rodriguez', '1982-12-15', '222333444', '23456789012', 0, 37);
 INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('isaac@example.com', 'password43', 'Isaac', 'Lee', '1992-11-19', '333444555', '34567890123', 1, 38);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('grace@example.com', 'password44', 'Grace', 'Perez', '1994-02-23', '444555666', '45678901234', 0, 39);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('david@example.com', 'password45', 'David', 'Kim', '1974-01-29', '555666777', '56789012345', 1, 40);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('riley@example.com', 'password46', 'Riley', 'Lewis', '1976-05-05', '666777888', '67890123456', 0, 41);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('luke@example.com', 'password47', 'Luke', 'Walker', '1986-04-14', '777888999', '78901234567', 1, 42);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('zoey@example.com', 'password48', 'Zoey', 'Hall', '1988-07-19', '888999000', '89012345678', 0, 43);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('jaxon@example.com', 'password49', 'Jaxon', 'Allen', '1992-08-25', '999000111', '90123456789', 1, 44);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('aubrey@example.com', 'password50', 'Aubrey', 'Young', '1979-09-30', '111222333', '01234567890', 0, 45);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('joseph@example.com', 'password51', 'Joseph', 'King', '1976-04-17', '888999000', '23456789012', 0, 46);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('amelia@example.com', 'password52', 'Amelia', 'Carter', '1984-05-27', '999000111', '34567890123', 1, 47);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('liam@example.com', 'password53', 'Liam', 'Wright', '1990-02-05', '111222333', '45678901234', 0, 48);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('olivia@example.com', 'password54', 'Olivia', 'Diaz', '1994-11-10', '222333444', '56789012345', 1, 49);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('william@example.com', 'password55', 'William', 'Wood', '1979-09-20', '333444555', '67890123456', 0, 50);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('emily@example.com', 'password56', 'Emily', 'Gomez', '1982-08-14', '444555666', '78901234567', 1, 51);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('benjamin@example.com', 'password57', 'Benjamin', 'Parker', '1985-06-11', '555666777', '89012345678', 0, 52);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('abigail@example.com', 'password58', 'Abigail', 'Evans', '1992-01-01', '666777888', '90123456789', 1, 53);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('matthew@example.com', 'password59', 'Matthew', 'Edwards', '1987-03-17', '777888999', '01234567890', 0, 54);
-INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('sophia@example.com', 'password60', 'Sophia', 'Hill', '1981-08-29', '888999000', '12345678901', 1, 55);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('grace.perez@example.com', 'password44', 'Grace', 'Perez', '1994-02-23', '444555666', '45678901234', 0, 39);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('david.kim@example.com', 'password45', 'David', 'Kim', '1974-01-29', '555666777', '56789012345', 1, 40);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('riley.lewis@example.com', 'password46', 'Riley', 'Lewis', '1976-05-05', '666777888', '67890123456', 0, 41);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('luke.walker@example.com', 'password47', 'Luke', 'Walker', '1986-04-14', '777888999', '78901234567', 1, 42);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('zoey.hall@example.com', 'password48', 'Zoey', 'Hall', '1988-07-19', '888999000', '89012345678', 0, 43);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('jaxon.allen@example.com', 'password49', 'Jaxon', 'Allen', '1992-08-25', '999000111', '90123456789', 1, 44);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('aubrey.young@example.com', 'password50', 'Aubrey', 'Young', '1979-09-30', '111222333', '01234567890', 0, 45);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('joseph.king@example.com', 'password51', 'Joseph', 'King', '1976-04-17', '888999000', '23456789012', 0, 46);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('amelia.carter@example.com', 'password52', 'Amelia', 'Carter', '1984-05-27', '999000111', '34567890123', 1, 47);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('liam.wright@example.com', 'password53', 'Liam', 'Wright', '1990-02-05', '111222333', '45678901234', 0, 48);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('olivia.diaz@example.com', 'password54', 'Olivia', 'Diaz', '1994-11-10', '222333444', '56789012345', 1, 49);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('william.wood@example.com', 'password55', 'William', 'Wood', '1979-09-20', '333444555', '67890123456', 0, 50);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('emily.gomez@example.com', 'password56', 'Emily', 'Gomez', '1982-08-14', '444555666', '78901234567', 1, 51);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('benjamin.parker@example.com', 'password57', 'Benjamin', 'Parker', '1985-06-11', '555666777', '89012345678', 0, 52);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('abigail.evans@example.com', 'password58', 'Abigail', 'Evans', '1992-01-01', '666777888', '90123456789', 1, 53);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('matthew.edwards@example.com', 'password59', 'Matthew', 'Edwards', '1987-03-17', '777888999', '01234567890', 0, 54);
+INSERT INTO patient (email, password, first_name, last_name, birth_date, phone_number, pesel, gender, adress_id) VALUES ('sophia.hill@example.com', 'password60', 'Sophia', 'Hill', '1981-08-29', '888999000', '12345678901', 1, 55);
 
 -- permissions_patient table --
 
@@ -949,63 +949,6 @@ INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 42); -- 
 -- Patient 43 - Camila King
 INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 43); -- Can view appointments
 
--- Patient 44 - Mateo Edwards
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 44); -- Can view appointments
-
--- Patient 45 - Luna Hall
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 45); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 45); -- Can view appointments
-
--- Patient 46 - Matthew Allen
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 46); -- Can view appointments
-
--- Patient 47 - Sofia Garcia
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 47); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 47); -- Can view appointments
-
--- Patient 48 - Daniel Lee
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 48); -- Can view appointments
-
--- Patient 49 - Penelope Perez
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 49); -- Can view appointments
-
--- Patient 50 - Benjamin Clark
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 50); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 50); -- Can view appointments
-
--- Patient 51 - Harper Rodriguez
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 51); -- Can view appointments
-
--- Patient 52 - Christopher Lee
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 52); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 52); -- Can view appointments
-
--- Patient 53 - Madison Harris
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 53); -- Can view appointments
-
--- Patient 54 - Joshua Walker
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 54); -- Can view appointments
-
--- Patient 55 - Victoria Perez
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 55); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 55); -- Can view appointments
-
--- Patient 56 - Gabriel Clark
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 56); -- Can view appointments
-
--- Patient 57 - Zoey Lewis
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 57); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 57); -- Can view appointments
-
--- Patient 58 - Samuel Allen
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 58); -- Can view appointments
-
--- Patient 59 - Addison Garcia
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 59); -- Can view appointments
-
--- Patient 60 - Evelyn Lee
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (2, 60); -- Can view doctors
-INSERT INTO permissions_patient (permissions_id, patient_id) VALUES (4, 60); -- Can view appointments
 
 -- department table --
 
@@ -1155,34 +1098,6 @@ INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescr
 
 -- Appointment 43
 INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-12', 'Evaluation of health progress and status', 43, 43, 43, 8, 4);
-
--- Appointment 44
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-13', 'Follow-up discussion on ongoing symptoms', 44, 44, 44, 9, 5);
-
--- Appointment 45
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-14', 'Therapy session and progress check', 45, 45, 45, 10, 1);
-
--- Appointment 46
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-15', 'Discussion on post-surgical care', 46, 46, 46, 11, 1);
-
--- Appointment 47
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-16', 'Consultation for ongoing treatment plan', 47, 47, 47, 12, 1);
-
--- Appointment 48
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-17', 'Follow-up examination and progress update', 48, 48, 48, 13, 1);
-
--- Appointment 49
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-18', 'Medication adjustment and review', 49, 49, 49, 14, 4);
-
--- Appointment 50
-INSERT INTO appointment (date_of, opis, hospital_referral_id, patient_id, prescription_id, employee_id, department_id) VALUES ('2023-11-19', 'Therapeutic session assessment and planning', 50, 50, 50, 15, 1);
-
-
-
-
-
-
-
 
 
 
