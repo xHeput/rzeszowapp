@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
+from .models import Appointment
+from datetime import date
 
 
 def home(request):
@@ -53,4 +55,25 @@ def statute(request):
     return render(request,'statute.html',{})
 
 def panel_user(request):
-    return render(request,'panel.html',{})
+    
+    # Take user info
+    user = request.user
+    
+    records = Appointment.objects.filter(
+        # Select only if user email matches patient email so next visit appears for user that is logged in
+        patient__email=user.username,
+        # Only select data after current date, because we want visits that are in the future
+        date_of__gt=date.today()
+    ).select_related(
+        # select_related is used to optimize queries by performing a SQL join
+        'employee__postion',
+        'patient__employee'
+    ).order_by(
+        # Order by the date so we get first aopointment
+        'date_of'
+    ).values(
+        # Values selected
+        'date_of', 'employee__postion__nazwa' , 'employee__imie', 'employee__nazwisko', 'patient__email'
+    )
+    return render(request, 'panel.html', {'records': records})
+
