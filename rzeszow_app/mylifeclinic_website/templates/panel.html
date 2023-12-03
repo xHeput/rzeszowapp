@@ -39,21 +39,30 @@
               </p>
             </div>
             {% endif %}
-            
-            <!--blue banner-->
+            <!--blue wlecome banner-->
             <div class="welcome">
               <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
-              <div class="text"><p>Witaj  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Tu załawtisz wszystkie swoje sprawy</p></div>
+              <div class="text"><p>Welcome  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Get your business done here </p></div>
               <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
             </div>
               
             <!--action buttons-->
             <div class="options">
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Wizty</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Recepty</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Leczenia</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Make an appointment</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Your appointments</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Prescriptions</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Treatment history</div>
               </div>
+            <!--doctor ranking-->
+            <div class="blue_container">
+              <div class="welcome_block">
+                <div class="text">Ranking lekarzy</div>
+              </div>
+              <div class="welcome_block">
+              </div>
+              <div class="welcome_block">
+              </div>
+            </div>
           {% else %}
           </div>
           <!--blue banner-->
