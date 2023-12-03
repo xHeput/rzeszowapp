@@ -28,7 +28,10 @@ header{
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
   font-style: normal;
+  display: flex;
+  align-items: center;
 }
+
 .left_side img{
   height:4vw; 
   width: 8vh;
@@ -36,8 +39,17 @@ header{
 .right_side{
   margin-right: 0;
   width: 18vw;
+  margin: 0px;
+  padding: 0px;
 }
-
+.profile{
+  display: flex;
+  align-items: center;
+}
+.profile p{
+  padding: 0px;
+  margin-right: -16px;
+}
 .arrow {
   border: solid black;
   border-width: 0 4px 4px 0;
