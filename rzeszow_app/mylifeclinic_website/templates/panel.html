@@ -59,7 +59,7 @@
             {% endif %}
           {% endif %}
             </div>
-            <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj pacjencie,<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
+            <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
               <div class="options">
                 <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
                 <div class="option2"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Wizty</div>
