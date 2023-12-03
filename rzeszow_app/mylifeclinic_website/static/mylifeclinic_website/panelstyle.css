@@ -46,9 +46,16 @@ header{
   display: flex;
   align-items: center;
 }
-.profile p{
+.profile img{
+  border-radius: 50%;
+  width: 2.25vw;
+  height: 4.25vh;
+  margin-top: 7px;
+  margin-right: -22px;
+}
+.profile a{
+  margin-right: -6px;
   padding: 0px;
-  margin-right: -16px;
 }
 .arrow {
   border: solid black;
@@ -62,12 +69,7 @@ header{
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-.dropdown img{
-  border-radius: 50%;
-  width: 2.25vw;
-  height: 4.25vh;
-  margin-top: 7px;
-}
+
 
 ul.navbar {
   list-style-type: none;
@@ -80,7 +82,7 @@ ul.navbar {
   font-weight: normal;
   font-style: normal;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 /* Style for the navigation items */
@@ -107,7 +109,6 @@ ul.navbar .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
@@ -128,6 +129,7 @@ ul.navbar .dropdown-content a {
 /* Show the dropdown content when hovering over the dropdown */
 ul.navbar li.dropdown:hover .dropdown-content {
   display: block;
+  
 }
 .blok{
   background-color: #fff;
