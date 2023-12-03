@@ -4,65 +4,134 @@ body{
   background-color: #ccc;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 .container{
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 100vw;
   justify-content: center;
 }
 header{
-  height: 117px;
+  height: 8vh;
+  width: 100vw;
   background-color: #fff;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
 }
-header img{
-  height:80px; 
-  width: 80px;
-  left: 0;
-}
-.logout{  
-  text-decoration: none;
-  margin-top: 19px;
-  margin-right: 70px;
-  cursor: pointer;
-  border-radius:50px;
-  padding:10px 20px 10px;
+.left_side{
+  margin-left: 0px;
+  width: 82vw;
+  color: #e74158;
+  font-size: 60px;
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
   font-style: normal;
-  margin-bottom: 30px;
-  background-color: #e74158;
-  font-size: 24px;  
-  color:  white;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
+}
+.left_side img{
+  height:4vw; 
+  width: 8vh;
+}
+.right_side{
+  margin-right: 0;
+  width: 18vw;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.dropdown img{
+  border-radius: 50%;
+  width: 2.25vw;
+  height: 4.25vh;
+  margin-top: 7px;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: "ProximaNovaExCn-Normal";
+  font-weight: normal;
+  font-style: normal;
   text-align: center;
+  font-size: 30px;
+}
+
+/* Style for the navigation items */
+ul.navbar li {
+  float: left;
   
 }
-.logout:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+
+/* Style for the links */
+ul.navbar li a {
+  display: block;
+  color:  black;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Style for the dropdown container */
+ul.navbar li.dropdown {
+  display: inline-block;
+}
+
+/* Style for the dropdown content */
+ul.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: "ProximaNovaExCn-Bold";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Style for the dropdown links */
+ul.navbar .dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Show the dropdown content when hovering over the dropdown */
+ul.navbar li.dropdown:hover .dropdown-content {
+  display: block;
 }
 .blok{
   background-color: #fff;
-  max-width: 100%;
+  width: 80vw;
   margin-top: 12px;
   height: 100vh;
  
 }
 .visit{
-  margin-top: 10px;
+  margin-top: 1vh;
   background-color: #e74158;
   text-align: center;
   border-radius: 20px;
   height: 60px;
   max-width: 100%;
   margin-left: 50px;
-  margin-right: 50px;
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
   font-style: normal;
@@ -71,9 +140,10 @@ header img{
 }
 .welcome{
   background-color: #0c9adb;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 1vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  margin-bottom: 2vh;
   display: flex;
   border-radius: 15px;
   text-align: center;
@@ -83,22 +153,11 @@ header img{
   font-size: 40px;
   color: #fff;
   justify-content: center;
-  height: 150px;
+  height: 20vh;
 }
 .welcome img{
   width: 120px;
   height: 170px;
-}
-.empty1{
-  background-color: #fff; 
-  max-width: 14%;
-  margin-top: 12px;
-  
-}
-.empty2{
-  background-color: #fff;
-  max-width: 14%;
-  margin-top: 12px;
 }
 
 .options{
@@ -108,13 +167,14 @@ header img{
   text-decoration: none;
 }
 .options img{
-  max-width: 90px;
-  max-height: 130px;
+  max-width: 150px;
+  max-height: 180px;
+  margin-top: 4vh;
 }
 .option1{
   background-color: #e6e6e6; 
-  width: 120px;
-  height: 160px;
+  width: 16vw;
+  height: 30vh;
   margin-top: 12px;
   margin-right: 20px;
   border-radius: 10px;
@@ -123,18 +183,15 @@ header img{
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
   font-style: normal;
-  font-size: 30px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 30px;  
 }
 .option1:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option2{
   background-color: #e6e6e6; 
-  width: 120px;
-  height: 160px;
+  width: 16vw;
+  height: 30vh;
   margin-top: 12px;
   margin-right: 20px;
   border-radius: 10px;
@@ -144,17 +201,14 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .option2:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option3{
   background-color: #e6e6e6; 
-  width: 120px;
-  height: 160px;
+  width: 16vw;
+  height: 30vh;;
   margin-top: 12px;
   margin-right: 20px;
   border-radius: 10px;
@@ -164,17 +218,15 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+
 }
 .option3:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .option4{
   background-color: #e6e6e6; 
-  width: 120px;
-  height: 160px;
+  width: 16vw;
+  height: 30vh;
   margin-top: 12px;
   margin-right: 20px;
   border-radius: 10px;
@@ -184,89 +236,9 @@ header img{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+
 }
 .option4:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-span{
-  color: #e74158;
-  font-size: 50px;
-  font-family: "ProximaNovaExCn-Bold";
-  font-weight: normal;
-  font-style: normal;
-  float: right;
-}
-#menu__toggle {
-  opacity: 0;
-}
-#menu__toggle:checked + .menu__btn > span {
-  transform: rotate(45deg);
-}
-#menu__toggle:checked + .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-#menu__toggle:checked + .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-.menu__btn {
-  position: fixed;
-  top: 50px;
-  left: 20px;
-  width: 36px;
-  height: 46px;
-  cursor: pointer;
-  z-index: 1;
-}
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #616161;
-  transition-duration: .25s;
-}
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
-}
-.menu__box {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 200px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #ECEFF1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
-}
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-.menu__item:hover {
-  background-color: #CFD8DC;
-}
+
