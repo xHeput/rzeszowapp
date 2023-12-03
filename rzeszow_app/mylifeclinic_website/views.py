@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
+from .models import Appointment
+from datetime import date
+
 
 def home(request):
     return render(request, 'home.html', {})
@@ -35,21 +38,21 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, "You have been logged in!")
+            messages.success(request, "Zalogowano pomyślnie!")
             return redirect('panel')
         else:
-            messages.success(request, "There was an error, please log in once agian")
+            messages.success(request, "Wystąpił błąd podczas logowania, spróbuj ponownie...")
             return redirect('login')
     else:
         return render(request, 'login.html', {})
 
 def logout_user(request):
     logout(request)
-    messages.success(request, "You have been logged out")
+    messages.success(request, "Wylogowano pomyślnie...")
     return redirect('home')
 
 def statute(request):
-    return render(request,'statute.html', {})
+    return render(request,'statute.html',{})
 
 def panel_user(request):
     
