@@ -11,7 +11,6 @@
 </head>
 <body>
       <header>
-            
             <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}">
           <div class="logout">
             {% if user.is_authenticated %}
@@ -22,34 +21,50 @@
           </div>
           <span>Panel Pacjenta</span> 
       </header>
+
       <div class="container">
+        <!--white container-->
         <div class="blok">
-          <!-- Only display div if user is authenticated -->
           {% if user.is_authenticated %}
             <!-- If there aren't any records, the div visit will not appear -->
             {% if records %}
+            <!--red banner-->
             <div class="visit"> 
-            
               <p>Next appointment:
                   <!-- records.0 means we take only first record -->
                   {{ records.0.date_of }}
                   {{ records.0.employee__postion__nazwa }}
                   {{ records.0.employee__imie }}
                   {{ records.0.employee__nazwisko }}
-
               </p>
-            {% endif %}
-          {% endif %}
             </div>
-            <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
-              <div class="options">
-                <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
-                <div class="option2"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Wizty</div>
-                <div class="option3"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Recepty</div>
-                <div class="option4"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Leczenia</div>
+            {% endif %}
+            
+            <!--blue banner-->
+            <div class="welcome">
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
+              <div class="text"><p>Witaj  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Tu załawtisz wszystkie swoje sprawy</p></div>
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
+            </div>
+              
+            <!--action buttons-->
+            <div class="options">
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Wizty</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Recepty</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Leczenia</div>
               </div>
-          
-        </div>
+          {% else %}
+          </div>
+          <!--blue banner-->
+          <div class="welcome">
+            <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
+            <div class="text"><p>You have to be logged in</p></div>
+            <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
+          </div>
+        
+          {% endif %}
+        </div>  
        
         
  
