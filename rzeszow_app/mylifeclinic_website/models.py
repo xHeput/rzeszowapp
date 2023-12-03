@@ -238,7 +238,9 @@ class Patient(models.Model):
     class Meta:
         managed = False
         db_table = 'patient'
-
+    
+    def __str__(self):
+        return (f"{self.first_name} {self.last_name}")
 
 class Permissions(models.Model):
     nazwa = models.CharField(max_length=255)
