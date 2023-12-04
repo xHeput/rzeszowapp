@@ -154,6 +154,7 @@ div .blue_container{
 }
 .welcome_block{
   width: 33%;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -180,4 +181,14 @@ div .blue_container{
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+}
+div .ranking_query{
+  text-align: left;
+  padding-left: 5px;
+}
+.ratings{
+  flex-direction: row-reverse;
+}
+.checked {
+  color: orange;
 }

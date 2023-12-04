@@ -161,7 +161,6 @@ class Employee(models.Model):
     imie = models.CharField(max_length=50, blank=True, null=True)
     nazwisko = models.CharField(max_length=70, blank=True, null=True)
     numer_tel = models.CharField(max_length=15, blank=True, null=True)
-    ranking = models.CharField(max_length=1, blank=True, null=True)
     postion = models.ForeignKey('Position', models.DO_NOTHING)
     
 
@@ -292,3 +291,11 @@ class PrescriptionMedicine(models.Model):
     class Meta:
         managed = False
         db_table = 'prescription_medicine'
+
+class Ranking(models.Model):
+    ranking = models.CharField(max_length=1, blank=True, null=True)
+    employee = models.ForeignKey(Employee, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'ranking'
