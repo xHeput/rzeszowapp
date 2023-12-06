@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Adress, Appointment, Department, Employee, HospitalReferral, Medicine, Patient, Permissions, PermissionsEmployee, PermissionsPatient, Position, Prescription, PrescriptionMedicine
+from .models import Adress, Appointment, Department, Employee, HospitalReferral, Medicine, Patient, Permissions, PermissionsEmployee, PermissionsPatient, Position, Prescription, PrescriptionMedicine, Ranking
 
 
 # Add here whatever you need in admin Panel to see
@@ -16,4 +16,5 @@ admin.site.register(PermissionsPatient)
 admin.site.register(Position)
 admin.site.register(Prescription)
 admin.site.register(PrescriptionMedicine)
+admin.site.register(Ranking)
 # Register your models here.

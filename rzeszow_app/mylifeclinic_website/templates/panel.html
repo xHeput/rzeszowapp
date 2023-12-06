@@ -8,6 +8,7 @@
     <title>Panel Pacjenta</title>
     <link rel="icon" type="image/x-icon" href="https://shorturl.at/yACJ8">
     <link rel="stylesheet" href="{% static  'mylifeclinic_website/panelstyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
       <header>
@@ -39,27 +40,48 @@
               </p>
             </div>
             {% endif %}
-            
-            <!--blue banner-->
+            <!--blue wlecome banner-->
             <div class="welcome">
               <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
-              <div class="text"><p>Witaj  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Tu załawtisz wszystkie swoje sprawy</p></div>
+              <div class="text"><p>Welcome  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Get your business done here </p></div>
               <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
             </div>
               
             <!--action buttons-->
             <div class="options">
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Rezerwacja</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Wizty</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Recepty</div>
-                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Leczenia</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"></a>Make an appointment</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"></a>Your appointments</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"></a>Prescriptions</div>
+                <div class="button"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"></a>Treatment history</div>
               </div>
+            <!--doctor ranking-->
+            <div class="blue_container">
+              <div class="welcome_block">
+                <div class="text">Ranking lekarzy</div><br/>
+                {% if results %}
+                  {% for result in results %}
+                    <div class = 'ranking_query'>{{ result.employee__imie }} {{ result.employee__nazwisko }} {{ result.avg_ranking }}</div>
+                  {% endfor %}
+                {% endif %}
+              </div>
+              <div class="welcome_block">
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="welcome_block">
+              </div>
+            </div>
           {% else %}
-          </div>
-          <!--blue banner-->
-          <div class="welcome">
+          
+           <!--blue wlecome banner-->
+           <div class="welcome">
             <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
-            <div class="text"><p>You have to be logged in</p></div>
+            <div class="text"><p> You have to be logged in </p></div>
             <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
           </div>
         
