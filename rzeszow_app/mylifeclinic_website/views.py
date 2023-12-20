@@ -43,6 +43,9 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'login.html', {})
+    
+def doc_user(request):
+    return render(request,'doc_login.html',{})
 
 def logout_user(request):
     logout(request)

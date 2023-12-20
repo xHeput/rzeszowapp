@@ -7,42 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLifeClinic</title>
     <link rel="icon" type="image/x-icon" href="https://shorturl.at/yACJ8">
-    <link rel="stylesheet" href="{% static  'mylifeclinic_website/signinstyle.css' %}">
+    <link rel="stylesheet" href="{% static  'mylifeclinic_website/doc_log_style.css' %}">
 </head>
 <body>
     <div class="container">
-        {% if messages %}
-            {% for message in messages %}
-                {{message}}
-            {% endfor %}
-        {% endif %}
+        <img src="{% static 'mylifeclinic_website/images/doctor.png' %}" width="80px" height="80px">
         <div class="header">
-            <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}"></a>
+            
+            <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_POZIOM_3.png' %}" ></a>
+            
         </div>
-        {% if user.is_authenticated %}
-        <h1>You have logged in</h1>
-        {% else %}
         <a href="{% url 'panel' %}"> panel</a>
         <h1>Login</h1>
             <div class="login">
                 
                 <form method="POST" action="{% url 'login' %}">
-                    {% csrf_token %} 
+ 
                     <div class="input_group">
                         <input type="text" class="inp" name="email" placeholder="Email" required>
                         <input type="password" class="inp" name="password" placeholder="Password" required>
                     </div>
                     <div class="check">
-                        <input type="checkbox"> <span class="remember">Remember Me</span>  <span class="forgot"> Forgot Your password?</span> 
+                        <input type="checkbox"> <span class="remember">Remember Me</span>  <span class="forgot"><a href="#"> Forgot Your password?</a></span> 
                     </div>
                     <button type="submit" class="signin">Sign In</button>
                 </form>
-                
-                <div class="bottom">
-                    Not a Member? <a href="{% url 'register' %}"> Sign Up</a>
-                </div>
             </div>
-            {% endif %}
+
     </div>
 </body>
 </html>
