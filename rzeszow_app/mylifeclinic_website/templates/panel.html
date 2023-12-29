@@ -40,7 +40,23 @@
       </header>
       <div class="container">
         <div class="blok">
-            <div class="visit">Najbliższa wizyta: Środa 21.11 Dr. Agnieszka Nowak</div>
+          <!-- Only display div if user is authenticated -->
+          {% if user.is_authenticated %}
+            <!-- If there aren't any records, the div visit will not appear -->
+            {% if records %}
+            <div class="visit"> 
+            
+              <p>Next appointment:
+                  <!-- records.0 means we take only first record -->
+                  {{ records.0.date_of }}
+                  {{ records.0.employee__postion__nazwa }}
+                  {{ records.0.employee__imie }}
+                  {{ records.0.employee__nazwisko }}
+
+              </p>
+            {% endif %}
+          {% endif %}
+            </div>
             <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj pacjencie,<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
               <div class="options">
                 <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"><br></a>Rezerwacja</div>
