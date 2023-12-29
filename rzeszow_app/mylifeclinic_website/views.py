@@ -75,8 +75,7 @@ def panel_user(request):
         # Values selected
         'date_of', 'employee__postion__nazwa' , 'employee__imie', 'employee__nazwisko', 'patient__email'
     )
-<<<<<<< Updated upstream
-=======
+
     '''
     # Query for doctor rankings
     results = (Ranking.objects.values('employee__imie', 'employee__nazwisko').annotate(avg_ranking=Round(Avg('ranking'), 2))
@@ -86,7 +85,6 @@ def panel_user(request):
     return render(request, 'panel.html', {'records': records, 'results': results})
     '''
     
->>>>>>> Stashed changes
     return render(request, 'panel.html', {'records': records})
 
 def test_user(request):
