@@ -68,7 +68,7 @@ h1
 }*/
 
 
-input[type="email"], input[type="password"],  input[type="text"]
+input[type="text"], input[type="email"], input[type="password"] 
 {
     width: 92%;
     padding: 8px;
@@ -85,27 +85,20 @@ input[type="email"], input[type="password"],  input[type="text"]
     font-weight: normal;
     font-style: normal;
     margin-top: 30px;
-    margin-bottom: 30px;
     background-color: #62b7de;
     font-size: 30px;  
     color:  white;
     border-radius: 15px;
     padding:10 10px;
-    width: 60%;
+    width: 16vw;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin: 0 auto; 
+    display: block;
 }
 
 .signin:hover
 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-input[type="checkbox"]
-{
-    width: 18px;
-    height: 18px;
 }
 
 .bottom
@@ -117,6 +110,7 @@ input[type="checkbox"]
     font-size: 16px;
     justify-content: center;
     max-width: 70vh;
+    margin-top: 12px;
 }
 a
 {
@@ -129,10 +123,11 @@ a
     font-style: normal;
     display: flex;
     font-size: 18px;
-    justify-content: center;
-    padding-top: 10px;
-    word-wrap: break-word;
-    width: 90%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    max-width: 10vw;
+    margin-bottom: 10px;
 }
 .check span{
     font-family: "ProximaNovaExCn-Regular";
@@ -140,15 +135,14 @@ a
     font-style: normal;
     display: flex;
     font-size: 18px;
-    justify-content: left;
-    word-wrap: break-word;
+    width: 7vw;
+    padding-top: 3px;
 }
 .forgot{
     font-family: "ProximaNovaExCn-Regular";
     font-weight: normal;
     font-style: normal;
-    display: flex;
     font-size: 18px;
-    justify-content: right;
-    word-wrap: break-word;
+    margin-left: 170px;
+    width: 3vw;
 }
