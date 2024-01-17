@@ -10,4 +10,5 @@ urlpatterns = [
     path('statute/',views.statute, name='statute'),
     path('panel/',views.panel_user, name='panel'),
     path('test/',views.test_user, name='test'),
+    path('doc_login/',views.doc_user, name='doc_user'),
 ]
