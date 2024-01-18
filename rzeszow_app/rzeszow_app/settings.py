@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mylifeclinic_website',
+    'django_recaptcha'
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mylifeclinicdb',
         'USER': 'root',
-        'PASSWORD': 'nAAKs55ZgpnAwrPGJwcp',
+        'PASSWORD': 'xRMajsha942mgCQrCjwH',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -117,3 +118,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+RECAPTCHA_PUBLIC_KEY = '6Lfw4E4pAAAAAAr40P4H2znSFpBd40JVbpFBNV10'
+RECAPTCHA_PRIVATE_KEY = '6Lfw4E4pAAAAAARn7H36TzZgjDLoXC3KyX9wfTzv'
