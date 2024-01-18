@@ -134,24 +134,23 @@ ul.navbar li.dropdown:hover .dropdown-content {
 }
 .blok{
   background-color: #fff;
-  width: 80vw;
+  width: 100vw;
   margin-top: 12px;
   height: 100vh;
- 
+  
 }
 .visit{
-  margin-top: 1vh;
   background-color: #e74158;
   text-align: center;
   border-radius: 20px;
   height: 60px;
-  max-width: 100%;
-  margin-left: 50px;
+  max-width: 60vw;
   font-family: "ProximaNovaExCn-Bold";
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
   color: #fff;
+  margin-left: 380px;
 }
 .welcome{
   background-color: #0c9adb;
