@@ -70,7 +70,12 @@
             {% endif %}
           {% endif %}
           
-            <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"><br>Welcome patient,<br>This is where you can take care of all your matters<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
+            <!--blue wlecome banner-->
+            <div class="welcome">
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
+              <div class="text"><p>Welcome  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Get your business done here </p></div>
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
+            </div>
               <div class="options">
                 <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"><br></a>Booking an appointment</div>
                 <div class="option2"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"><br></a>Appointments</div>
