@@ -12,20 +12,26 @@
 <body>
       <header>
         <div class="left_side">
-          <img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}"> <a>Panel Pacjenta</a> 
+          <a href="{% url 'home' %}"><img src="{% static 'mylifeclinic_website/images/MyLIFE_LOGO_PLUS.png' %}"> <a>Panel Pacjenta</a> </a>
         </div>
         <div class="righ_side">
                 <!--user menu-->
                 <ul class="navbar">
                   <li class="dropdown">
-                    <div class="profile"><a href="#"><img src="{% static 'mylifeclinic_website/images/pacjent.jpg' %}"><a>Maciej Niemiec</a> <i class="arrow down"></i></a></div>
+                    <div class="profile"><a href="#"><img src="{% static 'mylifeclinic_website/images/user med icon.png' %}"><a>
+                      {% if user.is_authenticated %}
+                        {{ login_name}}
+                      {% else %}
+                      <p>Pacjent</p>
+                    {% endif %}
+                    </a> <i class="arrow down"></i></a></div>
                     
                     <!-- Dropdown content -->
                     <div class="dropdown-content">
-                      <a href="#">Informacja profil</a>
-                      <a href="#">Przekaż opinie</a>
+                      <a href="#">Profile information</a>
+                      <a href="#">Give us a feedback</a>
                       <a href="#">Settings</a>
-                      <a href="#">Wyświetlanie i ułatwiane dostepu</a>
+                      <a href="#">Displaying and facilitating access</a>
                       <a>
                         {% if user.is_authenticated %}
                           <a href="{% url 'logout' %}">Logout</a>
@@ -54,15 +60,27 @@
                   {{ records.0.employee__nazwisko }}
 
               </p>
+            </div>
+            {% else %}
+            <div class="visit"> 
+                <p>No appointments to the near future
+
+              </p>
+            </div>
             {% endif %}
           {% endif %}
+          
+            <!--blue wlecome banner-->
+            <div class="welcome">
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}"></div>
+              <div class="text"><p>Welcome  {% if user.is_authenticated %} {{ user.first_name }} {% else %} ??? {% endif %},<br>Get your business done here </p></div>
+              <div class="picture"><img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
             </div>
-            <div class="welcome"><img src="{% static 'mylifeclinic_website/images/doctor phone.png' %}">Witaj pacjencie,<br>Tu załawtisz wszystkie swoje sprawy<img src="{% static 'mylifeclinic_website/images/patient card draw.png' %}"></div>
               <div class="options">
-                <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"><br></a>Rezerwacja</div>
-                <div class="option2"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"><br></a>Wizty</div>
-                <div class="option3"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"><br></a>Recepty</div>
-                <div class="option4"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"><br></a>Leczenia</div>
+                <div class="option1"><a href="#"><img src="{% static 'mylifeclinic_website/images/registration blue icon.png' %}"><br></a>Booking an appointment</div>
+                <div class="option2"><a href="#"><img src="{% static 'mylifeclinic_website/images/kalendzarz blue.png' %}"><br></a>Appointments</div>
+                <div class="option3"><a href="#"><img src="{% static 'mylifeclinic_website/images/recepty blue.png' %}"><br></a>Prescriptions</div>
+                <div class="option4"><a href="#"><img src="{% static 'mylifeclinic_website/images/medical-book blue new.png' %}"><br></a>History of Visits</div>
               </div>
       </div>
  

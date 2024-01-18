@@ -2,7 +2,7 @@
 @import url("https://db.onlinewebfonts.com/c/7774b78789333f7af07cff84380f5c6a?family=ProximaNovaExCn-Bold");
 body 
 {
-    background-color: #62b7de;
+    background-color: #f0ffff;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -15,7 +15,7 @@ body
 
 .container 
 {
-    max-width: 400px;
+    max-width: 40vh;
     margin: 0 auto;
     padding: 10px;
     background-color: #fff;
@@ -24,13 +24,11 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 90vh;
 }
 
 .header img
 {
-    max-width:200px ;
+    max-width:200px;
     max-width: 150px;
     padding: 10px;
     margin: 0 auto;
@@ -52,58 +50,55 @@ h1
     font-size: 40px;
 }
 
-.form
-{
+.login
+{   
     justify-content: center;
     align-items: center;
-}
-
-.input_group 
-{
-    font-family: "ProximaNovaExCn-Regular";
-    font-weight: normal;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
     
 }
 
-input[type="text"], input[type="email"], input[type="password"] 
+input[type="email"], input[type="password"],  input[type="text"]
 {
-    width: 96%;
+    width: 92%;
     padding: 8px;
+    margin: 5px;
     border: 1px solid #ccc;
     border-radius: 8px;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    
 }
 
-.signup
+.signin
 {
     font-family: "ProximaNovaExCn-Bold";
     font-weight: normal;
     font-style: normal;
-    margin-top: 15px;
-    margin-bottom: 15px;
     background-color: #62b7de;
     font-size: 30px;  
     color:  white;
     border-radius: 15px;
     padding:10 10px;
-    width: 60%;
+    width: 16vw;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin: 0 auto; 
+    display: block;
+    margin-bottom: 12px;
 }
 
-.signup:hover
+.signin:hover
 {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
-.terms
+input[type="checkbox"]
 {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.check{
     font-family: "ProximaNovaExCn-Regular";
     font-weight: normal;
     font-style: normal;
@@ -114,29 +109,21 @@ input[type="text"], input[type="email"], input[type="password"]
     word-wrap: break-word;
     width: 90%;
 }
-input[type="checkbox"]
-{
-    width: 18px;
-    height: 18px;
-}
-
-.bottom
-{
+.remember{
     font-family: "ProximaNovaExCn-Regular";
     font-weight: normal;
-    font-style: normal; 
-    display: flex;
-    font-size: 16px;
-    justify-content: center;
-    max-width: 70vh;
+    font-style: normal;
+    font-size: 18px;
+    width: 30vh;
 }
-a
-{
+.forgot{
+    font-family: "ProximaNovaExCn-Regular";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    
+}
+a{
     text-decoration: none;
-    color: #62b7de;
-}
-
-.custom-captcha-class{
-    margin-right: 200px;
-    background-color:#62b7de;
+    color: black;
 }

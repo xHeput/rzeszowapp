@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
-from .models import Appointment
+from .models import Appointment, Patient
 from datetime import date
 
 
@@ -45,6 +45,9 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'login.html', {})
+    
+def doc_user(request):
+    return render(request,'doc_login.html',{})
 
 def logout_user(request):
     logout(request)
@@ -75,7 +78,7 @@ def panel_user(request):
         # Values selected
         'date_of', 'employee__postion__nazwa' , 'employee__imie', 'employee__nazwisko', 'patient__email'
     )
-
+    login_name = user.username
     '''
     # Query for doctor rankings
     results = (Ranking.objects.values('employee__imie', 'employee__nazwisko').annotate(avg_ranking=Round(Avg('ranking'), 2))
@@ -85,5 +88,5 @@ def panel_user(request):
     return render(request, 'panel.html', {'records': records, 'results': results})
     '''
     
-    return render(request, 'panel.html', {'records': records})
+    return render(request, 'panel.html', {'records': records, 'login_name': login_name})
 
