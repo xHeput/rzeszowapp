@@ -10,18 +10,24 @@ def home(request):
     return render(request, 'home.html', {})
 
 def register_user(request):
+    # Check if the request method is POST
     if request.method == 'POST':
+        # Create a SignUpForm instance with the POST data
         form = SignUpForm(request.POST)
+         # Check if the form is valid
         if form.is_valid():
+             # Save the form data and create a new user
             form.save()
-            # Authenticate and login
+            # Authenticate and log in the user
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = authenticate(username = username, password = password)
             login(request, user)
+            # Display a success message and redirect to the user panel
             messages.success(request, "You have successfully registered! Welcome!")
             return redirect('panel')
     else:
+        # If the request method is not POST, create an empty SignUpForm instance
         form = SignUpForm()
         return render(request, 'register.html', {'form':form})
     
@@ -32,6 +38,7 @@ def register_user(request):
 def login_user(request):
     # Chack to see if logging in
     if request.method == 'POST':
+        # Retrieve the username and password from the POST data
         username = request.POST['email']
         password = request.POST['password']
         # Authenticate

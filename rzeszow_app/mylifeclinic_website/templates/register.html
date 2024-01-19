@@ -19,23 +19,26 @@
         </div>
         <h1>Create Account</h1>
             <div class="form">
+            <!-- Opening form tag with POST method -->
                 <form method="POST" action="">
+                <!-- Container for form inputs with a CSS class 'input_group' -->
                     <div class="input_group">
+                    <!-- CSRF token for security -->
                         {% csrf_token %}
+                        <!-- Check if there are form errors -->
                         {% if form.errors %}
-                                
+                         <!-- Display an error message if there are form errors -->       
                                     Your Form Has Errors
+                                    <!-- Loop through form fields to display individual field errors -->
                                     {% for field in form %}
                                         {% if field.errors %}
                                             {{ field.errors }}
                                         {% endif %}
                                     {% endfor %}
-                                    
-                                
                             {% endif %}
-
+                        <!-- Render the form fields as paragraphs -->
                         {{ form.as_p }}
-                    </div>
+                    </div><!-- Closing tag for the input_group container -->
                     <div class="terms">
                         <input type="checkbox" required>
                             <span class="text_sign_up">By selecting this checkbox, you are confirming that you have read
@@ -43,8 +46,7 @@
                         </div>  
                     </div>
                     <button type="submit" class="signup">Register</button>
-                     
-                </form>
+                </form><!-- Closing form tag -->
                 <div class="bottom">
                     <p>Already have an account?<a href="{% url 'login' %}"> Sign In</a></p>
                 </div>

@@ -17,22 +17,27 @@
         <div class="righ_side">
                 <!--user menu-->
                 <ul class="navbar">
+                   <!-- List item with dropdown functionality -->
                   <li class="dropdown">
+                    <!-- User profile section with an icon -->
                     <div class="profile"><a href="#"><img src="{% static 'mylifeclinic_website/images/user med icon.png' %}"><a>
+                      <!-- Displaying the user's name if authenticated -->
                       {% if user.is_authenticated %}
                         {{ login_name}}
                       {% else %}
+                      <!-- Default display for non-authenticated users -->
                       <p>Pacjent</p>
                     {% endif %}
                     </a> <i class="arrow down"></i></a></div>
                     
-                    <!-- Dropdown content -->
+                    <!-- Dropdown content for user menu -->
                     <div class="dropdown-content">
                       <a href="#">Profile information</a>
                       <a href="#">Give us a feedback</a>
                       <a href="#">Settings</a>
                       <a href="#">Displaying and facilitating access</a>
                       <a>
+                        <!-- Conditional display of login or logout link based on user authentication -->
                         {% if user.is_authenticated %}
                           <a href="{% url 'logout' %}">Logout</a>
                             {% else %}
@@ -62,6 +67,7 @@
               </p>
             </div>
             {% else %}
+             <!-- Displaying a div with a message when no appointments are scheduled -->
             <div class="visit"> 
                 <p>No appointments to the near future
 
