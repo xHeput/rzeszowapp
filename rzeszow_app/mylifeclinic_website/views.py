@@ -43,11 +43,15 @@ def login_user(request):
         password = request.POST['password']
         # Authenticate
         user = authenticate(request, username=username, password=password)
+        # Check if authentication was successful
         if user is not None:
+            # Log in the authenticated user
             login(request, user)
+            # Display a success message and redirect to the user panel
             messages.success(request, "Zalogowano pomyślnie!")
             return redirect('panel')
         else:
+            # Display an error message if authentication fails and redirect to the login page
             messages.success(request, "Wystąpił błąd podczas logowania, spróbuj ponownie...")
             return redirect('login')
     else:
