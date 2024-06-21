@@ -36,6 +36,11 @@ def register_user(request):
    
 
 def login_user(request):
+
+    # Check if user is already logged in
+    if request.user.is_authenticated:
+        return redirect('panel')
+    
     # Chack to see if logging in
     if request.method == 'POST':
         # Retrieve the username and password from the POST data
@@ -52,7 +57,7 @@ def login_user(request):
             return redirect('panel')
         else:
             # Display an error message if authentication fails and redirect to the login page
-            messages.success(request, "Wystąpił błąd podczas logowania, spróbuj ponownie...")
+            messages.error(request, "Wystąpił błąd podczas logowania, spróbuj ponownie...")
             return redirect('login')
     else:
         return render(request, 'login.html', {})
